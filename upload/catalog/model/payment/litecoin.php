@@ -1,4 +1,4 @@
-<?php
+<?php 
 /*
 Copyright (c) 2012 John Atkinson (jga)
 
@@ -20,8 +20,27 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 DEALINGS IN THE SOFTWARE.
 */
 
-// Text
-$_['text_title'] = 'Bitcoin - bitcoind';
-$_['button_bitcoin_confirm'] 		= 'I sent it!';
-$_['error_msg'] = 'Error communicating with payment provider. Please contact the store for assistance.';
+class ModelPaymentlitecoin extends Model {
+  	public function getMethod($address) {
+		$this->load->language('payment/litecoin');
+		
+		if ($this->config->get('litecoin_status')) {
+        	$status = TRUE;
+		} else {
+			$status = FALSE;
+		}
+		
+		$method_data = array();
+	
+		if ($status) {  
+      		$method_data = array( 
+        		'code'         	=> 'litecoin',
+        		'title'      	=> $this->language->get('text_title'),
+				'sort_order' 	=> $this->config->get('litecoin_sort_order'),
+      		);
+    	}
+   
+    	return $method_data;
+  	}
+}
 ?>

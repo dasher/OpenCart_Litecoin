@@ -1,13 +1,14 @@
-# OpenCart_Bitcoin
+# OpenCart_litecoin
 ### by John Atkinson (jga) from [BTC Gear](http://btcgear.com/)
+### updated to use litecoin instead of litecoin by laSeek 2012
 
-Donations can be paid here: **12ctRXVVPAXQ6CQyEXkBhvi33K7kP4CMB5**
+Donations can be paid here: **12ctRXVVPAXQ6CQyEXkBhvi33K7kP4CMB5** to the original author
 
 Initial bounty paid by cablepair.
 
-This is an OpenCart payment module that communicates with a bitcoin client using JSON RPC.
+This is an OpenCart payment module that communicates with a litecoin client using JSON RPC.
 
-This code accurately converts USD to BTC using the up-to-the-minute MtGox average.  It is completely self contained and requires no cron jobs or external hardware other than a properly configured bitcoind server.  Every order creates a new bitcoin address for payment and gives it a label corresponding to the order_id of the order.  It installs like any other OpenCart plugin and it is completely integrated with OpenCart.
+This code accurately converts USD to LTC using the current btce average.  It is completely self contained and requires no cron jobs or external hardware other than a properly configured litecoind server.  Every order creates a new litecoin address for payment and gives it a label corresponding to the order_id of the order.  It installs like any other OpenCart plugin and it is completely integrated with OpenCart.
 
 This extension has been tested with OpenCart versions between 1.5.2.x and 1.5.4.
 
@@ -16,20 +17,20 @@ Any questions or comments can be sent to support@btcgear.com.
 # Installation
 
 1. Upload all files maintaining OpenCart folder structure.
-2. Install the payment module in the admin console (Extensions > Payments > Bitcoin > Install).
-3. Edit the payment module settings (Extensions > Payments > Bitcoin > Edit).
-4. Run at least one test order through checkout up until payment (no payment required).  The first order initializes the Bitcoin currency and will return 0 BTC for the order total.
+2. Install the payment module in the admin console (Extensions > Payments > litecoin > Install).
+3. Edit the payment module settings (Extensions > Payments > litecoin > Edit).
+4. Run at least one test order through checkout up until payment (no payment required).  The first order initializes the litecoin currency and will return 0 ltc for the order total.
 
 ## Explanation of Settings
 
-* *Bitcoin RPC Username*: This is the username in the "rpcuser" line of your bitcoin.conf file.
-* *Bitcoin RPC Host Address*: This is the IP address of the computer bitcoind is running on.
-* *Bitcoin RPC Password*: This is the password in the "rpcpassword" line of your bitcoin.conf file.
-* *Bitcoin RPC Port*: This is the port number in the "rpcport" line of your bitcoin.conf file.  The default port is 8332.
+* *litecoin RPC Username*: This is the username in the "rpcuser" line of your litecoin.conf file.
+* *litecoin RPC Host Address*: This is the IP address of the computer litecoind is running on.
+* *litecoin RPC Password*: This is the password in the "rpcpassword" line of your litecoin.conf file.
+* *litecoin RPC Port*: This is the port number in the "rpcport" line of your litecoin.conf file.  The default port is 8332.
 * *The prefix for the address labels*: The addresses will be assigned to accounts named with the format [prefix]_[order_id].
-* *Show BTC as a store currency*: If you select yes, your customers will be able to view prices in BTC.
+* *Show ltc as a store currency*: If you select yes, your customers will be able to view prices in ltc.
 * *Status of a new order*: Choose a status for an order that has received payment with 0 confirmations.
-* *Status*: Enable the Bitcoin payment module here.
+* *Status*: Enable the litecoin payment module here.
 * *Sort Order*: Where you want this module to show up in relation to the other payment modules on the checkout page.
 
 
