@@ -20,7 +20,7 @@ OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 DEALINGS IN THE SOFTWARE.
 */
 
-class ControllerPaymentlitecoin extends Controller {
+class ControllerPaymentLitecoin extends Controller {
 
     private $payment_module_name  = 'litecoin';
 	protected function index() {
