@@ -34,7 +34,7 @@ class ModelPaymentlitecoin extends Model {
 	
 		if ($status) {  
       		$method_data = array( 
-        		'code'         	=> 'litecoin',
+        		'code'         	=> 'Litecoin',
         		'title'      	=> $this->language->get('text_title'),
 				'sort_order' 	=> $this->config->get('litecoin_sort_order'),
       		);
