@@ -1,6 +1,6 @@
 # OpenCart_litecoin
 ### by John Atkinson (jga) from [BTC Gear](http://btcgear.com/)
-### updated to use litecoin instead of litecoin by laSeek 2012
+### updated to use litecoin instead of bitcoin by laSeek 2012
 
 Donations can be paid here: **12ctRXVVPAXQ6CQyEXkBhvi33K7kP4CMB5** to the original author
 
