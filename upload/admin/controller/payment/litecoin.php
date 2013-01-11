@@ -1,7 +1,7 @@
 <?php
 /*
 Copyright (c) 2012 John Atkinson (jga)
-Updated with multicoin support by laSeek 2012
+Updated with litecoin support by laSeek 2012
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this
 software and associated documentation files (the "Software"), to deal in the Software
@@ -20,28 +20,28 @@ FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TOR
 OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 DEALINGS IN THE SOFTWARE.
 */
-class ControllerPaymentMulticoin extends Controller {
+class ControllerPaymentLitecoin extends Controller {
 	private $error = array();
-	private $payment_module_name  = 'multicoin';
+	private $payment_module_name  = 'litecoin';
 
 	private function validate() {
 		if (!$this->user->hasPermission('modify', 'payment/'.$this->payment_module_name)) {
 			$this->error['warning'] = $this->language->get('error_permission');
 		}
 
-        if (!$this->request->post['multicoin_rpc_username']) {
+        if (!$this->request->post['litecoin_rpc_username']) {
             $this->error['username'] = $this->language->get('error_username');
         }
-        if (!$this->request->post['multicoin_rpc_address']) {
+        if (!$this->request->post['litecoin_rpc_address']) {
             $this->error['address'] = $this->language->get('error_address');
         }
-        if (!$this->request->post['multicoin_rpc_password']) {
+        if (!$this->request->post['litecoin_rpc_password']) {
             $this->error['password'] = $this->language->get('error_password');
         }
-        if (!$this->request->post['multicoin_rpc_port']) {
+        if (!$this->request->post['litecoin_rpc_port']) {
             $this->error['port'] = $this->language->get('error_port');
         }
-        if (!$this->request->post['multicoin_prefix']) {
+        if (!$this->request->post['litecoin_prefix']) {
             $this->error['prefix'] = $this->language->get('error_prefix');
         }
 
@@ -136,7 +136,7 @@ class ControllerPaymentMulticoin extends Controller {
 
         $this->data['breadcrumbs'][] = array(
             'text'      => $this->language->get('heading_title'),
-            'href'      => $this->url->link('payment/multicoin', 'token=' . $this->session->data['token'], 'SSL'),
+            'href'      => $this->url->link('payment/litecoin', 'token=' . $this->session->data['token'], 'SSL'),
             'separator' => ' :: '
         );
 
