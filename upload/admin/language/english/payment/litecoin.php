@@ -24,7 +24,7 @@ $_['heading_title']      = 'Litecoin';
 // Text
 $_['text_payment']       = 'Payment';
 $_['text_success']       = 'Success: You have modified the litecoin payment module!';
-$_['text_litecoin'] = '<img src="view/image/payment/litecoin.jpg" alt="litecoin" title="litecoin" />';
+$_['text_litecoin'] = '<img src="view/image/payment/litecoin.png" alt="litecoin" title="litecoin" />';
 $_['text_yes']       = 'Yes';
 $_['text_no']       = 'No';
 
